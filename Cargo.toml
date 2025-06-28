@@ -2,6 +2,12 @@
 name = "suffixes"
 version = "0.1.0"
 edition = "2021"
+readme = "README.md"
+homepage = "https://github.com/navneetankur/suffixes"
+repository = "https://github.com/navneetankur/suffixes"
+license = "MIT"
+keywords = ["cast", "wrap"]
+description = "Cast primitive type and wrap Option/Result using suffix. Like 2.some(), 2.u8()."
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
