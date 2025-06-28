@@ -13,5 +13,4 @@ description = "Cast primitive type and wrap Option/Result using suffix. Like 2.s
 
 [dependencies]
 more-asserts = "0.3"
-num-traits = "0.2"
 

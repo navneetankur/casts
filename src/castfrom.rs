@@ -1,5 +1,4 @@
-use num_traits::Num;
-pub trait CastFrom<T: Num + Copy>: Sized {
+pub trait CastFrom<T: Copy>: Sized {
     fn cast_from(v: T) -> Self;
 }
 macro_rules! cast_from_these {
