@@ -1,16 +1,28 @@
 #![allow(clippy::needless_return)]
 #![feature(step_trait)]
-pub mod cast;
 pub mod wrap;
+pub mod castit;
+pub mod castfrom;
+pub mod trunit;
+
+pub use trunit::TrunIt;
+pub use castit::CastIt;
+pub use castfrom::CastFrom;
 #[cfg(test)]
 mod test {
-    use crate::cast::CastIt;
+    use crate::wrap::{WrappedOption, WrappedResult};
 
-    fn test_casts() {
-        let three = 3;
-        assert_eq!(three.u8(), three as u8);
-        assert_eq!(three.u16(), three as u16);
-        assert_eq!(three.u32(), three as u32);
-        assert_eq!(three.u64(), three as u64);
+    mod f32panic;
+    mod f64panic;
+    mod simpletests;
+
+    #[test]
+    fn test_some() {
+        assert_eq!(Some(3), 3.some());
+    }
+    #[test]
+    fn test_ok() {
+        let three = 3u8;
+        assert_eq!(Result::<_,()>::Ok(three), three.ok());
     }
 }
