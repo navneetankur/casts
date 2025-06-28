@@ -8,9 +8,10 @@ pub mod trunit;
 pub use trunit::TrunIt;
 pub use castit::CastIt;
 pub use castfrom::CastFrom;
+pub use crate::wrap::{WrappedOption, WrappedResult};
 #[cfg(test)]
 mod test {
-    use crate::wrap::{WrappedOption, WrappedResult};
+    use crate::{WrappedOption, WrappedResult};
 
     mod f32panic;
     mod f64panic;
